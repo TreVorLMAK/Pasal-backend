@@ -9,17 +9,17 @@ const sequelize = new Sequelize(envConfig.connectionString as string,{
 try{
     sequelize.authenticate()
         .then(() => {
-            console.log('Database synced successfully')
+            console.log("Connected !!! 😀")
         })
         .catch(err=> {
-            console.log('Error syncing database: ', err)
+            console.log("ERROR 😝 : ", err)
             })
             } catch (error) {
                 console.log(error)
                 }
 
                 sequelize.sync({force : false}).then(()=>{
-                    console.log("local changes injected to database successfully")
+                    console.log("synced !!")
                 })
 
 export default sequelize

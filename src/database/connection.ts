@@ -17,8 +17,7 @@ try{
             } catch (error) {
                 console.log(error)
                 }
-
-                sequelize.sync({force : true}).then(()=>{
+                sequelize.sync({force : false,alter:false}).then(()=>{
                     console.log("synced !!")
                 })
 
